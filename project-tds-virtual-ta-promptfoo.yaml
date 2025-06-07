@@ -1,0 +1,22 @@
+providers:
+  - id: openai:gpt-4.1-mini
+    label: "Local TDS Virtual TA"
+    type: rest  # <- use 'type' for older versions
+    config:
+      url: http://127.0.0.1:8000/api/
+      method: POST
+      headers:
+        Content-Type: application/json
+      body: |
+        {
+          "question": "{{ prompt }}",
+          "image": null
+        }
+      response_path: answer
+
+prompts:
+  - What is hypothesis testing?
+  - Can I skip Week 2 quiz if I completed the assignment?
+  - How to install Git in Windows for this course?
+  - Which model should I use for GA5 Q8 – gpt-4o-mini or gpt-3.5-turbo?
+  - What is the capital of France?
