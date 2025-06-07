@@ -8,3 +8,4 @@ webdriver-manager
 pytesseract
 Pillow
 python-multipart
+openai>=1.0.0
